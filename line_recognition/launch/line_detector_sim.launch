@@ -1,0 +1,6 @@
+<launch>
+  <node name="dynamic_tf_map" pkg="line_recognition" type="tf_map_gazebo.py" output="screen"/> 
+  <node name="remapping_node" pkg="line_recognition" type="cam_gazebo.py" output="screen"/> 
+  <node name="remapping_node2" pkg="line_recognition" type="map_gazebo.py" output="screen"/> 
+ 
+</launch>

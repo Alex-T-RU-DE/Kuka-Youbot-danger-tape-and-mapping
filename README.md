@@ -11,14 +11,16 @@ This project consists of ros msg which transports coordinate of the centers of e
 
 in order to start program you could use following command:
 
-roslaunch line_recognition line_detector.launch
+`roslaunch line_recognition line_detector.launch`
 
 or you can simply start in from the source folder with following commands:
 
-python tf_map.py
-python cam.py
-python map.py
+`python tf_map.py`
+`python cam.py`
+`python map.py`
 
-You can start these codes on the different machines. (For instance you can run image processing on the nvidia jetson but your map will be on other remote machine)
+You can start these codes on the different machines within one ros network. (For instance you can run image processing on the nvidia jetson but your map will be on other remote machine)
 
-Example https://youtu.be/rVSTNN2OTR8
+Example without depth camera: https://youtu.be/rVSTNN2OTR8
+
+

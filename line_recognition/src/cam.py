@@ -28,19 +28,11 @@ class image_rec(object):
         
 	def recognition(self,image_array):
 		
-
-
 		#print("Yellow tape:")
 		#imgContour, imgDil=self.imageOperation(image_array,1)
 
 		#print("Blue tape:")
 		#imgContour2, imgDil2=self.imageOperation(image_array,3)
-
-
-		#imgStack=stackImages(0.8,([image_array, image_array, image_array],
-		#				  [imgContour, imgContour1, imgContour2]))
-		
-		
 
 		#print("Red tape:")
 		imgContour1, imgDil1=self.imageOperation(image_array,2)
@@ -52,7 +44,7 @@ class image_rec(object):
 	def imageOperation(self,image_array,color):
 		imgContour=image_array.copy()
 		image_blur=cv2.GaussianBlur(image_array, (3,3), 1)
-		#image_blur=cv2.bilateralFilter(image_array,9,75,75)
+		
 		#yellow
 		if color==1:
 			lower=np.array([15,138,64])			
@@ -112,7 +104,7 @@ class image_rec(object):
 		self.pub.publish(msgobj_array)
 
 
-
+	#the second step of image processing: we are considering each contour that we found before to increase the accuracy 
 	def imageOperation_1(self,image_array,color):
 		imgContour=image_array.copy()
 		image_blur=cv2.GaussianBlur(image_array, (9,9), 1)
@@ -138,7 +130,9 @@ class image_rec(object):
             
 		return logic
 
-	    
+	#this method checking each contour for the number of the end-points here.
+	#In other words, we are checking whether its a rectangle(or something like a rectangle) or not 
+	#it helps us to avoid the recognition of different objects with the same color as we are searching for
 	def getContours_1(self,img, imgContour):
 
 		contours, hierarchy = cv2.findContours(img, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_NONE)[-2:]

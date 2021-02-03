@@ -9,8 +9,6 @@ Software:
 -Opencv
 -Python
 
-This project consists of ros msg which transports coordinate of the centers of each square of the danger tape to the mapping program.
-
 in order to start program you could use following command:
 
 `roslaunch line_recognition line_detector.launch`

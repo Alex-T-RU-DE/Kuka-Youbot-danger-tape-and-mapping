@@ -45,14 +45,9 @@ class image_rec(object):
 		#print("Red tape:")
 		imgContour1, imgDil1=self.imageOperation(image_array,2)
 		
-		imgContour2, imgDil2=self.imageOperation(image_array,4)
-
 		cv2.imshow('frame',  imgContour1)
-		cv2.imshow('frame1',  imgContour2)
 		if cv2.waitKey(1) & 0xFF==ord('q'):
 				exit()
-
-
 
 	def imageOperation(self,image_array,color):
 		imgContour=image_array.copy()

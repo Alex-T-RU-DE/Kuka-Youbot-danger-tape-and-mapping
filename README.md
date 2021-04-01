@@ -23,6 +23,6 @@ or you can simply start in from the source folder with following commands:
 
 You can start these programs on the different machines within one ros network. (For instance you can run image processing on the nvidia jetson but your map will be on other remote machine)
 
-Example without depth camera: https://youtu.be/rVSTNN2OTR8
+Example: https://youtu.be/rVSTNN2OTR8
 
 

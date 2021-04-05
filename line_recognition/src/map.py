@@ -57,33 +57,23 @@ class image_rec(object):
 	         basetocam.transform.rotation.z, 
 	         basetocam.transform.rotation.w]
 	    R = tf.transformations.quaternion_matrix(q)
-	    #rospy.loginfo(q)
-	   
+
 	    T = np.array([
 	    basetocam.transform.translation.x, 
 	    basetocam.transform.translation.y, 
 	    basetocam.transform.translation.z,
 	    1
-	    ])	    
-	    #rospy.loginfo(T[:3])	    
+	    ])	    	    
 	    groundToCam = np.array([
 	    [R[0][0], R[0][1], R[0][2], T[0]],
 	    [R[1][0], R[1][1], R[1][2], T[1]], 
 	    [R[2][0], R[2][1], R[2][2], T[2]],
 	    [0, 0, 0, 1]
 	    ])
-	    #rospy.loginfo(groundToCam)
 	    return groundToCam,T
 
 	def getObjXYZ(self, line_coordinate, basetocam):
 	    	    
-	    #cameraMatrix = np.array([
-		#[596.83, 0, 317.44, 0],
-		#[0, 598.09, 244.35, 0], 
-		#[0, 0, 1, 0],
-		#[0, 0, 0, 1]
-		#])
-
 	    cameraMatrix=np.array([
 		[self.camera_params.P[0],self.camera_params.P[1],self.camera_params.P[2],self.camera_params.P[3]],
 		[self.camera_params.P[4],self.camera_params.P[5],self.camera_params.P[6],self.camera_params.P[7]],
@@ -108,15 +98,12 @@ class image_rec(object):
 		
 		#collecting latest data about line and position of the robot on the map
 		line_data=rospy.wait_for_message("/line_coordinates", tape_msgs_array, timeout=None)
-		basetocam = self.tfBuffer.lookup_transform('odom', 
-												   'arm_camera_link', 
-												   rospy.Time())
-		#print(len(line_data.tape_msgs_array))
+		basetocam = self.tfBuffer.lookup_transform('odom', 'arm_camera_link', rospy.Time())
 		
 		#computing position of each line's square in map
 		for i in range(0,len(line_data.tape_msgs_array)):	
 				
-			world_coordinates=self.getObjXYZ(line_data.tape_msgs_array[i], 											basetocam)			
+			world_coordinates=self.getObjXYZ(line_data.tape_msgs_array[i],basetocam)			
 			#in order to understand where does these poits, we counting in a such a way
 			#that can be better understanded in X and Y coordinates					
 			x=(self.map_center_point+int(world_coordinates[1]/self.grid.info.resolution))
@@ -138,8 +125,7 @@ def main():
 	try:
 		rate.sleep()
 	except KeyboardInterrupt:
-		print("Shutting down the program")
-		
+		print("Shutting down the program")		
 
 if __name__=='__main__':
 	main()

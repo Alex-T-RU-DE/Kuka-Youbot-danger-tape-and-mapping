@@ -106,7 +106,7 @@ class image_rec(object):
 			world_coordinates=self.getObjXYZ(line_data.tape_msgs_array[i],basetocam)			
 			#in order to understand where does these poits, we counting in a such a way
 			#that can be better understanded in X and Y coordinates					
-			x=(self.map_center_point+int(world_coordinates[1]/self.grid.info.resolution))
+			x=(self.map_center_point+int((world_coordinates[1]-self.grid.info.resolution)/self.grid.info.resolution))
 			y=(self.map_center_point+int((world_coordinates[0])/self.grid.info.resolution))
 			
 			#transforming X:Y coonrinates in the number of OccupancyGrid.data[] array format

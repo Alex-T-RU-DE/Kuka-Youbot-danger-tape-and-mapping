@@ -79,9 +79,7 @@ class image_rec(object):
 		[self.camera_params.P[4],self.camera_params.P[5],self.camera_params.P[6],self.camera_params.P[7]],
 		[self.camera_params.P[8],self.camera_params.P[9],self.camera_params.P[10],self.camera_params.P[11]],
 		[0, 0, 0, 1]
-		])
-	   	
-	    print(cameraMatrix)			   
+		])		   
 	    RT,T = self.getTF(basetocam)
 	    pix = np.array([line_coordinate.posX, line_coordinate.posY, 1, 1])
 	    invM = np.linalg.inv(cameraMatrix)

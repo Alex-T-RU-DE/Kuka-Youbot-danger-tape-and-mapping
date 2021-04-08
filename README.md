@@ -29,7 +29,7 @@ After we prepared parameters for the map, we must modify our occupancy grid data
 
 Once we defined its world coordinate, we must change the value to ‘100’ at some point in the [OccupancyGrid.data[]](http://docs.ros.org/en/melodic/api/nav_msgs/html/msg/OccupancyGrid.html). Since the Occupancy_grid message representing the map as a 1D array, we must find the right index, where the value has to be changed. The next pictures explain how to find the right index of [OccupancyGrid.data[]] for particular X and Y coordinate:
 
-![Imgur Image](https://imgur.com/pcfKKqI)
+<blockquote class="imgur-embed-pub" lang="en" data-id="a/p97uP8M" data-context="false" ><a href="//imgur.com/a/p97uP8M"></a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
 
 
 

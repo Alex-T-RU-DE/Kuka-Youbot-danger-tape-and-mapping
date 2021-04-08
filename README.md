@@ -58,6 +58,7 @@ You can start these programs on the different machines within one ros network. (
 
 Here you can find few examples for this project:
 
+(youtube link below)
 [![IMAGE ALT TEXT](http://img.youtube.com/vi/Qk4FWbUZ-5A/0.jpg)](http://www.youtube.com/watch?v=Qk4FWbUZ-5A "Video Title")
-https://youtu.be/Qk4FWbUZ-5A
-https://www.youtube.com/watch?v=Qk4FWbUZ-5A
+
+

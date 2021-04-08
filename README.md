@@ -1,5 +1,3 @@
-(project is not yet finished)
-
 # Kuka-Youbot-danger-tape-recognition-and-mapping
 
 The goal of this project is to add a danger tapes coorinates into occupancy grid with ROS and without depth camera. 

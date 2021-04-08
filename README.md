@@ -54,6 +54,10 @@ To start the program you can with following commands:
 
 You can start these programs on the different machines within one ros network. (For instance you can run image processing on the nvidia jetson but your map will be on other remote machine)
 
-Example: https://www.youtube.com/watch?v=Qk4FWbUZ-5A
+# Examples
 
+Here you can find few examples for this project:
 
+[![IMAGE ALT TEXT](http://img.youtube.com/vi/Qk4FWbUZ-5A/0.jpg)](http://www.youtube.com/watch?v=Qk4FWbUZ-5A "Video Title")
+https://youtu.be/Qk4FWbUZ-5A
+https://www.youtube.com/watch?v=Qk4FWbUZ-5A

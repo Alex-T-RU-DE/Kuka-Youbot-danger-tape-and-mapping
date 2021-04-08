@@ -80,7 +80,7 @@ To start script for the map's combination you should use following command:
 
 Here you can find few examples for this project:
 
-(youtube link below)<br/>
+(click on the picture to start video)<br/>
 [![IMAGE ALT TEXT](http://img.youtube.com/vi/Qk4FWbUZ-5A/0.jpg)](http://www.youtube.com/watch?v=Qk4FWbUZ-5A "Video Title")
 
 

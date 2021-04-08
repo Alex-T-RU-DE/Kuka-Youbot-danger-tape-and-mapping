@@ -9,7 +9,7 @@ Software:
 - Python
 
 
-# Mapping
+# ROS Mapping
 
 The [map](http://docs.ros.org/en/melodic/api/nav_msgs/html/msg/OccupancyGrid.html) in the ROS is represented as a 1D array that contains three numbers: 
 - -1 

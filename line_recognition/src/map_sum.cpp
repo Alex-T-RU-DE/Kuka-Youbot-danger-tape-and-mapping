@@ -26,9 +26,7 @@ class map_summ
 	    sum_map.info=gmapping_map->info;
 	    sum_map.data = gmapping_map->data;
 	    sum_map.info.map_load_time=ros::Time::now();
-	    sum_map.header.frame_id="combined_map";
-
-	    
+	    sum_map.header.frame_id="combined_map";	    
 	    tape_map_sub = n.subscribe("new_map", 1000, &map_summ::update_t_map, this);
 	   
 	}

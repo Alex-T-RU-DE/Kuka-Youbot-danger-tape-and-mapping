@@ -17,6 +17,7 @@ The [map](http://docs.ros.org/en/melodic/api/nav_msgs/html/msg/OccupancyGrid.htm
 - -1 
 -	0
 - 100
+
 The number ‘-1’ means that the area is not explored before. 
 The number ‘0’ means that area is clear and there is no obstacle. 
 The number ‘100’ means that the area is occupied and there is an obstacle. 

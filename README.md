@@ -31,6 +31,16 @@ Once we defined its world coordinate, we must change the value to ‘100’ at s
 
 ![Imgur](https://i.imgur.com/7ktSIlQ.png)
 ![Imgur](https://i.imgur.com/E6BHjMD.png)
+
+Where:
+Cx- center of the map in X coordinate<br/>
+Cy – center of the map in Y coordinate<br/>
+X – X coordinate of a point in the world’s frame<br/>
+Y – Y coordinate of a point in the world’s frame<br/>
+R – resolution of the map<br/>
+H – number of the point in the height<br/>
+
+
 (I created this equation by myself, probably it works not so good, but its working for this project)
 
 

@@ -42,6 +42,12 @@ H – number of the point in the height<br/>
 
 
 # Running the program
+Before starting make sure that the ROS-subscribers in all the programs have the right ROS-topics.
+
+You can also modify the parameters for color masks according to your lighting and colors by running:
+
+`rosrun line_recognition cam_test.py`
+
 To start the program you can with following commands:
 
 `rosrun line_recognition python tf_map.py`

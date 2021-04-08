@@ -58,6 +58,23 @@ To start the program you can with following commands:
 
 You can start these programs on the different machines within one ros network. (For instance you can run image processing on the nvidia jetson but your map will be on other remote machine)
 
+#Combination of gmapping and tape's recognition
+
+
+Tape map
+![Imgur](https://imgur.com/wtYdlNF)
+
+Gmapping's map
+![Imgur](https://imgur.com/LkmK0Hu)
+
+Combined map of gmapping and tape's recognition
+![Imgur](https://imgur.com/dKQAUlB)
+
+To start script for the map's combination you should use following command:
+
+```rosrun line_recognition map_sum  
+
+
 # Examples
 
 Here you can find few examples for this project:

@@ -30,7 +30,7 @@ Once we defined its world coordinate, we must change the value to ‘100’ at s
 ![Imgur](https://i.imgur.com/7ktSIlQ.png)
 ![Imgur](https://i.imgur.com/E6BHjMD.png)
 
-Where:
+Where:<br/>
 Cx- center of the map in X coordinate<br/>
 Cy – center of the map in Y coordinate<br/>
 X – X coordinate of a point in the world’s frame<br/>

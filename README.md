@@ -62,17 +62,17 @@ You can start these programs on the different machines within one ros network. (
 
 
 Tape map
-![Imgur](https://imgur.com/wtYdlNF)
+![Imgur](https://imgur.com/wtYdlNF.png)
 
 Gmapping's map
-![Imgur](https://imgur.com/LkmK0Hu)
+![Imgur](https://imgur.com/LkmK0Hu.png)
 
 Combined map of gmapping and tape's recognition
-![Imgur](https://imgur.com/dKQAUlB)
+![Imgur](https://imgur.com/dKQAUlB.png)
 
 To start script for the map's combination you should use following command:
 
-```rosrun line_recognition map_sum  
+```rosrun line_recognition map_sum``` 
 
 
 # Examples

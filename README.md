@@ -40,10 +40,10 @@ Y – Y coordinate of a point in the world’s frame<br/>
 R – resolution of the map<br/>
 H – number of the point in the height<br/>
 
-
 (I created this equation by myself, probably it works not so good, but its working for this project)
 
 
+# Running the program
 To start the program you can with following commands:
 
 `rosrun line_recognition python tf_map.py`
@@ -58,7 +58,7 @@ You can start these programs on the different machines within one ros network. (
 
 Here you can find few examples for this project:
 
-(youtube link below)
+(youtube link below)<br/>
 [![IMAGE ALT TEXT](http://img.youtube.com/vi/Qk4FWbUZ-5A/0.jpg)](http://www.youtube.com/watch?v=Qk4FWbUZ-5A "Video Title")
 
 

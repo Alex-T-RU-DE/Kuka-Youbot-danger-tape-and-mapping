@@ -162,6 +162,8 @@ add_executable(line_recognition src/cam.cpp)
 
 target_link_libraries(line_recognition ${OpenCV_LIBRARIES})
 
+
+
 #############
 ## Install ##
 #############
@@ -222,4 +224,5 @@ ${OpenCV_INCLUDE_DIRS}
 )
 
 
-
+add_executable(map_sum src/map_sum.cpp)
+target_link_libraries(map_sum ${catkin_LIBRARIES})

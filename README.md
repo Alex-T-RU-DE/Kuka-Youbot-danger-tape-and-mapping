@@ -1,7 +1,8 @@
 (project is not yet finished)
 
 # Kuka-Youbot-danger-tape-recognition-and-mapping
-Project is still in progress. Now we are replacing usual webcam by depth cam. The goal of this project is to add a danger tapes coorinates into occupancy grid with ROS. 
+
+The goal of this project is to add a danger tapes coorinates into occupancy grid with ROS and without depth camera. 
 
 
 Software:
@@ -9,20 +10,20 @@ Software:
 - Opencv
 - Python
 
-in order to start program you could use following command:
+#Mapping
 
-```roslaunch line_recognition line_detector.launch```
 
-or you can simply start in from the source folder with following commands:
 
-`python tf_map.py`
+To start the program you can with following commands:
 
-`python cam.py`
+`rosrun line_recognition python tf_map.py`
 
-`python map.py`
+`rosrun line_recognition cam.py`
+
+`rosrun line_recognition map.py`
 
 You can start these programs on the different machines within one ros network. (For instance you can run image processing on the nvidia jetson but your map will be on other remote machine)
 
-Example: https://youtu.be/rVSTNN2OTR8
+Example: https://www.youtube.com/watch?v=Qk4FWbUZ-5A
 
 

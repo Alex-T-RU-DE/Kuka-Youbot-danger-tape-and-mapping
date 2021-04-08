@@ -58,8 +58,9 @@ To start the program you can with following commands:
 
 You can start these programs on the different machines within one ros network. (For instance you can run image processing on the nvidia jetson but your map will be on other remote machine)
 
-#Combination of gmapping and tape's recognition
+# Combination of gmapping and tape's recognition
 
+Here you can see an example of merging two cards:
 
 Tape map
 ![Imgur](https://imgur.com/wtYdlNF.png)

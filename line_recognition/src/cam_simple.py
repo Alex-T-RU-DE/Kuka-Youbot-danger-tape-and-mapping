@@ -8,7 +8,6 @@ import time
 from tape_coordinate.msg import tape_msgs
 from tape_coordinate.msg import tape_msgs_array
 
-
 class image_rec(object):
 	
 	
@@ -17,7 +16,6 @@ class image_rec(object):
 		self.image_sub=rospy.Subscriber("/usb_cam/image_raw", Image, self.camera_callback)
 		self.pub=rospy.Publisher('/line_coordinates', tape_msgs_array, queue_size=100)
 		self.bridge_object=CvBridge()
-
 	
 	def camera_callback(self,data):
 		try:
@@ -28,8 +26,6 @@ class image_rec(object):
         
 	def recognition(self,image_array):
 		
-
-
 		#print("Yellow tape:")
 		#imgContour, imgDil=self.imageOperation(image_array,1)
 
@@ -40,15 +36,12 @@ class image_rec(object):
 		#imgStack=stackImages(0.8,([image_array, image_array, image_array],
 		#				  [imgContour, imgContour1, imgContour2]))
 		
-		
 
 		#print("Red tape:")
 		imgContour1, imgDil1=self.imageOperation(image_array,2)
 		cv2.imshow('frame',  imgContour1)	
 		if cv2.waitKey(1) & 0xFF==ord('q'):
 				exit()
-
-
 
 	def imageOperation(self,image_array,color):
 		imgContour=image_array.copy()
@@ -73,8 +66,7 @@ class image_rec(object):
 		self.getContours(imgDil,imgContour)            
             
 		return imgContour, imgDil
-            
-                 
+                           
             
 	def getContours(self,img, imgContour):
 

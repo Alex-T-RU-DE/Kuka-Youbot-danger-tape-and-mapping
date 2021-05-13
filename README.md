@@ -75,6 +75,9 @@ To start script for the map's combination you should use following command:
 
 ```rosrun line_recognition map_sum``` 
 
+# Usage by AMCL and Global path planning
+
+TBC
 
 # Examples
 
@@ -82,5 +85,7 @@ Here you can find few examples for this project:
 
 (click on the picture to start video)<br/>
 [![IMAGE ALT TEXT](http://img.youtube.com/vi/Qk4FWbUZ-5A/0.jpg)](http://www.youtube.com/watch?v=Qk4FWbUZ-5A "Video Title")
+
+
 
 

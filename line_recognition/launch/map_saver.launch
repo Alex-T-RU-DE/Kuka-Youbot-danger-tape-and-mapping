@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<launch>
+  
+	<arg name="map_1" default="/combined_map"/>
+
+	<node name="map_saver_1" pkg="map_server" type="map_saver" args="-f $(find line_recognition)/maps/combined_map">
+		<remap from="/map" to="$(arg map_1)" />
+	</node>
+	
+
+</launch>

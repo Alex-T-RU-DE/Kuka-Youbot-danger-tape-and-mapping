@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<launch>
+  	<node type="rviz" name="rviz" pkg="rviz" output="screen" />
+	<node pkg="tf" type="static_transform_publisher" name="lidar" args="0 0.0 0.0 0 0 0 base_laser_front_link laser .1"/> 
+	<node name="scan_filter_node" pkg="line_recognition" type="laser_visual.py" output="screen"/> 
+	<!--<node pkg="rviz" type="rviz" name="rviz" /> -->
+	<include file="$(find youbot_navigation_global)/launch/2dslam.launch"/>
+	<include file="$(find youbot_navigation_local)/launch/move_base_local.launch"/>
+	
+	
+</launch>

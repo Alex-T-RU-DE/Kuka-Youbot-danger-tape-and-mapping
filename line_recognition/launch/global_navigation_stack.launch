@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<launch>
+  	
+  	<arg name="map_file" default="$(find line_recognition)/maps/combined_map.yaml"/>
+  	
+  	<node type="rviz" name="rviz" pkg="rviz" output="screen" />
+	<node pkg="tf" type="static_transform_publisher" name="lidar" args="0 0.0 0.0 0 0 0 base_laser_front_link laser .1"/> 
+	<node name="scan_filtering_node" pkg="line_recognition" type="laser_visual.py" output="screen"/> 
+	<node name="map_server" pkg="map_server" type="map_server" args="$(arg map_file)" />
+	
+	<include file="$(find youbot_navigation_global)/launch/amcl.launch"/>
+	<include file="$(find youbot_navigation_global)/launch/move_base_global.launch"/>
+	
+	
+</launch>

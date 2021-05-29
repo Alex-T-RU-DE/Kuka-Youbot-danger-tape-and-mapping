@@ -1,0 +1,4 @@
+<launch>
+  <include file="$(find youbot_moveit)/launch/move_group.launch"/>
+  <node name="exp_pos_node_1" pkg="line_recognition" type="set_exp_pos.py" output="screen"/> 
+</launch>

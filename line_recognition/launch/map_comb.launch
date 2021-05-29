@@ -2,4 +2,5 @@
 <launch>
   <node name="map_combination" pkg="line_recognition" type="map_combination" output="screen"/> 
   <node name="tf_map_sum" pkg="line_recognition" type="tf_map_sum.py" output="screen"/> 
+  
 </launch>

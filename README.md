@@ -10,7 +10,7 @@ Software:
 
 The map’s programs allow printing the central points of danger tape’s squares on the ROS Occupancy grid map. Few programs allow users to use the map built by the SLAM algorithm combined with the map build by the danger tape’s recognition program. The picture represents how does this package work:
 
-![Imgur](https://i.imgur.com/gWyjOJe.png)
+![Imgur](https://i.imgur.com/jfCdewU.png)
 
 # ROS Mapping
 

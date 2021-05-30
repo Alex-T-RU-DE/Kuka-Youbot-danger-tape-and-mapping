@@ -17,17 +17,13 @@ from sensor_msgs.msg import CameraInfo
 class image_rec(object):
 	
 	def __init__(self):
-		#define all the variables
-		
-		#point of the center of RVIZ 
 		self.map_center_point = 750
-		
 		#getting the params of the camera
 		self.camera_params=rospy.wait_for_message("/camera/aligned_depth_to_color/camera_info", 
 												  CameraInfo, 
 												  timeout=None)
 		#creating empty map
-		self.grid=OccupancyGrid()
+		self.grid = OccupancyGrid()
 		self.grid.info.resolution = 0.02
 		self.grid.info.width = 1472
 		self.grid.info.height = 1472

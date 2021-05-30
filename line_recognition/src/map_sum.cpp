@@ -37,11 +37,9 @@ class map_summ
 		if(arr_size == static_cast<int>(msg.info.width * msg.info.height))
 		 { 
 		  for (int i = 0; i < arr_size; i++)
-			{  
-				if(static_cast<int>(msg.data[i]) == 100)
-					sum_map.data[i]=100;
-			}
-			map_pub.publish(sum_map);
+			if(static_cast<int>(msg.data[i]) == 100)
+				sum_map.data[i]=100;
+		  map_pub.publish(sum_map);
 		 }
 		else
 			cout<< "Error: sizes are different (" << arr_size << " and " <<

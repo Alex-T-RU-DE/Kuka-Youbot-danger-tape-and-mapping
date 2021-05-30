@@ -1,15 +1,11 @@
 #!/usr/bin/env python  
 import rospy
 import moveit_commander
-import math
-import tf
-import tf2_ros
 from geometry_msgs.msg import PoseStamped
 from moveit_msgs.srv import GetPositionIKRequest, GetPositionIK
 import time
 import numpy as np
 import sys
-from grip_msg.msg import grip_msg
 
 
 	
@@ -41,7 +37,7 @@ def goGrasp():
 if __name__ == '__main__':
     try:
      moveit_commander.roscpp_initialize(sys.argv)
-     rospy.init_node('tf2_listener')
+     rospy.init_node('searching_pos_node')
 
      goGrasp()
     except rospy.ROSInterruptException:

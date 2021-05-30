@@ -17,7 +17,6 @@ def moveToTravel2(group):
 	joint_goal[3] = 2.65
 	joint_goal[4] = 2.925
 	group.set_joint_value_target(joint_goal)
-	#plan2 = group.plan()
 	group.go(wait=True)
 	group.stop()
 	group.clear_pose_targets()

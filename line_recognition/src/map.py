@@ -38,7 +38,6 @@ class image_rec(object):
 		self.grid.info.origin.orientation.w = 1.0
 		self.grid.data = tuple(np.zeros(self.grid.info.width * self.grid.info.height))
 		self.map_array = list(self.grid.data)
-		
 		#defining publishers and subscribers	
 		self.map_pub = rospy.Publisher("/new_map", OccupancyGrid, queue_size = 100)	
 		self.tfBuffer = tf2_ros.Buffer()
@@ -47,7 +46,6 @@ class image_rec(object):
 
 
 	def getTF(self, basetocam):
-
 	    q = [basetocam.transform.rotation.x, 
 	         basetocam.transform.rotation.y, 
 	         basetocam.transform.rotation.z, 
@@ -73,9 +71,7 @@ class image_rec(object):
 		[self.camera_params.P[4],self.camera_params.P[5], self.camera_params.P[6],self.camera_params.P[7]],
 		[self.camera_params.P[8],self.camera_params.P[9], self.camera_params.P[10],self.camera_params.P[11]],
 		[0, 0, 0, 1]
-		])
-	   	
-	    		   
+		])		   
 	    RT,T = self.getTF(basetocam)
 	    pix = np.array([line_coordinate.posX, line_coordinate.posY, 1, 1])
 	    invM = np.linalg.inv(cameraMatrix)
@@ -93,16 +89,13 @@ class image_rec(object):
 		#collecting latest data about line and position of the robot on the map
 		line_data=rospy.wait_for_message("/line_coordinates", tape_msgs_array, timeout=None)
 		basetocam = self.tfBuffer.lookup_transform('odom', 'arm_camera_link', rospy.Time())
-		
 		#computing position of each line's square in map
-		for i in range(0, len(line_data.tape_msgs_array)):	
-				
+		for i in range(0, len(line_data.tape_msgs_array)):			
 			world_coordinates=self.getObjXYZ(line_data.tape_msgs_array[i], basetocam)			
 			#in order to understand where does these poits, we counting in a such a way
 			#that can be better understanded in X and Y coordinates					
 			x = (self.map_center_point+int(world_coordinates[1] / self.grid.info.resolution))
 			y = (self.map_center_point+int((world_coordinates[0]) / self.grid.info.resolution))
-			
 			#transforming X:Y coonrinates in the number of OccupancyGrid.data[] array format
 			#and assign value "occupied" (100) to this position
 			self.map_array[(x * self.grid.info.height + y)] = 100							

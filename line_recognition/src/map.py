@@ -100,13 +100,13 @@ class image_rec(object):
 			world_coordinates=self.getObjXYZ(line_data.tape_msgs_array[i], basetocam)			
 			#in order to understand where does these poits, we counting in a such a way
 			#that can be better understanded in X and Y coordinates					
-			x=(self.map_center_point+int(world_coordinates[1] / self.grid.info.resolution))
-			y=(self.map_center_point+int((world_coordinates[0]) / self.grid.info.resolution))
+			x = (self.map_center_point+int(world_coordinates[1] / self.grid.info.resolution))
+			y = (self.map_center_point+int((world_coordinates[0]) / self.grid.info.resolution))
 			
 			#transforming X:Y coonrinates in the number of OccupancyGrid.data[] array format
 			#and assign value "occupied" (100) to this position
 			self.map_array[(x * self.grid.info.height + y)] = 100							
-		self.grid.data=tuple(self.map_array)
+		self.grid.data = tuple(self.map_array)
 		self.map_pub.publish(self.grid)			
 		rospy.loginfo("New points added to the map")
         

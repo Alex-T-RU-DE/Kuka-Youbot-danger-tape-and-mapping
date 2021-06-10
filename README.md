@@ -12,6 +12,9 @@ The map’s programs allow printing the central points of danger tape’s square
 
 ![Imgur](https://i.imgur.com/jfCdewU.png)
 
+Combination of slam and tape's recognition
+[![IMAGE ALT TEXT](https://youtu.be/MPohthiMvw4/0.jpg)](https://youtu.be/MPohthiMvw4 "Video Title")
+
 # ROS Mapping
 
 The [map](http://docs.ros.org/en/melodic/api/nav_msgs/html/msg/OccupancyGrid.html) in the ROS is represented as a 1D array that contains three numbers: 

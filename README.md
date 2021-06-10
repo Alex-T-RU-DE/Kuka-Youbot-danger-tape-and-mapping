@@ -13,7 +13,7 @@ The map’s programs allow printing the central points of danger tape’s square
 ![Imgur](https://i.imgur.com/jfCdewU.png)
 
 Combination of slam and tape's recognition
-[![IMAGE ALT TEXT](https://youtu.be/MPohthiMvw4/0.jpg)](https://youtu.be/MPohthiMvw4 "Video Title")
+https://youtu.be/MPohthiMvw4/0.jpg
 
 # ROS Mapping
 

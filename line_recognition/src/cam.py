@@ -74,15 +74,15 @@ class image_rec(object):
 	def getContours(self,img, imgContour, image_array):
 
 		contours, hierarchy = cv2.findContours(img, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_NONE)[-2:]
-		msgobj_array=tape_msgs_array()
+		msgobj_array = tape_msgs_array()
 		for cnt in contours:
-			area=cv2.contourArea(cnt)
+			area = cv2.contourArea(cnt)
 			if area>300:
-				msgobj=tape_msgs()
+				msgobj = tape_msgs()
 				cv2.drawContours(imgContour, cnt, -1, (0,255,0), 3)
-				peri=cv2.arcLength(cnt, True)
-				approx=cv2.approxPolyDP(cnt, 0.02*peri, True)
-				x, y, w, h= cv2.boundingRect(approx)
+				peri = cv2.arcLength(cnt, True)
+				approx = cv2.approxPolyDP(cnt, 0.02*peri, True)
+				x, y, w, h = cv2.boundingRect(approx)
 				#print("coordinates: ")
 				#print((x+w/2),(y+h/2))
 				
@@ -96,9 +96,9 @@ class image_rec(object):
 				if self.imageOperation_1(crop_img,2):
 					#cv2.imshow('croped', crop_img)
 					cv2.rectangle(imgContour, (x, y), (x+w, y+h), (255, 0, 0), 2)
-					msgobj.posX=(x+w/2)
-					msgobj.posY=(y+h/2)
-					msgobj.length=0
+					msgobj.posX = (x+w/2)
+					msgobj.posY = (y+h/2)
+					msgobj.length = 0
 					msgobj_array.tape_msgs_array.append(msgobj)
 
 		self.pub.publish(msgobj_array)
